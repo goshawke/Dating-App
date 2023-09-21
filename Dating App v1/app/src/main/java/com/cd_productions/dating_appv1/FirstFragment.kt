@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.cd_productions.dating_appv1.databinding.FragmentFirstBinding
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -32,8 +33,16 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.btnSkip.setOnClickListener {
+            Snackbar.make(view, "You do not like Darshil", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+            //findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        binding.btnLike.setOnClickListener {
+            Snackbar.make(view, "You like Darshil", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+            //findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }
 

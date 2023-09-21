@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.cd_productions.dating_appv1"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.cd_productions.dating_appv1"
